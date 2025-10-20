@@ -1,0 +1,82 @@
+/* 🌌 Fondo tipo noche estrellada */
+.fondo-espacial {
+  background: radial-gradient(circle at 20% 20%, #1b2735, #090a0f);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Efecto de estrellas */
+.fondo-espacial::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* 🌠 Tarjeta central */
+.card-usuario {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 25px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* 🪐 Imagen de perfil */
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.foto-usuario {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #9b5de5; /* tono púrpura espacial */
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* 🛰️ Inputs */
+ion-item {
+  margin-bottom: 10px;
+  --background: transparent;
+  --color: white;
+}
+
+ion-label,
+ion-input {
+  color: #e0d7ff !important;
+}
+
+/* 🪄 Botón espacial */
+.boton-espacial {
+  margin-top: 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #9b5de5, #6a00f4);
+  box-shadow: 0 0 10px #9b5de5;
+  color: #fff;
+}
+
+/* ✨ Animación de parpadeo (opcional para estrellas dinámicas) */
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}

@@ -3,8 +3,13 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'perfil',
+    redirectTo: 'inicio', // 🔹 Cambiado: ahora abre la página de inicio del administrador
     pathMatch: 'full',
+  },
+  {
+    path: 'inicio',
+    loadComponent: () =>
+      import('./pages/inicio/inicio.page').then((m) => m.InicioPage),
   },
   {
     path: 'perfil',

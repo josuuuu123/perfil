@@ -1,15 +1,15 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-title> Registro </ion-title>
+    <ion-title>Registro de Usuario</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding fondo-espacial">
-  <ion-card class="card-usuario">
-    <div class="img-container">
-      <img [src]="imagen" alt="Usuario" class="foto-usuario" />
-      <input type="file" #fileInput accept="image/*" (change)="onFileSelected($event)" hidden />
-      <ion-button fill="outline" size="small" color="tertiary" (click)="fileInput.click()">
+<ion-content class="ion-padding fondo-principal">
+  <ion-card class="tarjeta-principal">
+    <div class="contenedor-foto">
+      <img [src]="imagen" alt="Usuario" class="foto-perfil" />
+      <input type="file" #inputArchivo accept="image/*" (change)="onFileSelected($event)" hidden />
+      <ion-button fill="outline" size="small" color="tertiary" (click)="inputArchivo.click()">
         <ion-icon name="camera"></ion-icon>&nbsp; Subir Imagen
       </ion-button>
     </div>
@@ -30,7 +30,7 @@
         <ion-input type="email" [(ngModel)]="correo"></ion-input>
       </ion-item>
 
-      <ion-button expand="block" class="boton-espacial" (click)="guardarCambios()">
+      <ion-button expand="block" class="boton-primario" (click)="guardarCambios()">
         <ion-icon name="planet"></ion-icon>&nbsp; Registrar Usuario
       </ion-button>
     </ion-card-content>

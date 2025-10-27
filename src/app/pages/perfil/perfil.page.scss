@@ -1,12 +1,11 @@
-/* 🌌 Fondo tipo noche estrellada */
-.fondo-espacial {
+/* Fondo general */
+.fondo-principal {
   background: radial-gradient(circle at 20% 20%, #1b2735, #090a0f);
   position: relative;
   overflow: hidden;
 }
 
-/* ✨ Efecto de estrellas */
-.fondo-espacial::before {
+.fondo-principal::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -16,8 +15,8 @@
   z-index: 0;
 }
 
-/* 🌠 Tarjeta central */
-.card-usuario {
+/* Tarjeta principal */
+.tarjeta-principal {
   position: relative;
   z-index: 1;
   text-align: center;
@@ -27,26 +26,27 @@
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
+  box-shadow: 0 0 20px rgba(155, 93, 229, 0.3);
 }
 
-/* 🪐 Imagen de perfil */
-.img-container {
+/* Contenedor de foto */
+.contenedor-foto {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px;
 }
 
-.foto-usuario {
+.foto-perfil {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 3px solid #9b5de5; /* tono púrpura espacial */
+  border: 3px solid #9b5de5;
   object-fit: cover;
   margin-bottom: 10px;
 }
 
-/* 🛰️ Inputs */
+/* Campos del formulario */
 ion-item {
   margin-bottom: 10px;
   --background: transparent;
@@ -58,25 +58,48 @@ ion-input {
   color: #e0d7ff !important;
 }
 
-/* 🪄 Botón espacial */
-.boton-espacial {
+/* Botón principal */
+.boton-primario {
   margin-top: 20px;
   font-weight: bold;
   border-radius: 12px;
   background: linear-gradient(45deg, #9b5de5, #6a00f4);
   box-shadow: 0 0 10px #9b5de5;
   color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/* ✨ Animación de parpadeo (opcional para estrellas dinámicas) */
-@keyframes twinkle {
-  0% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.3;
-  }
+.boton-primario:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #b983ff;
+}
+
+/* Modal de éxito */
+.alerta-exito {
+  --background: #1e1e2f;
+  --color: #ffffff;
+  --border-radius: 15px;
+  --backdrop-opacity: 0.7;
+  --box-shadow: 0 0 20px rgba(155, 93, 229, 0.4);
+  text-align: center;
+}
+
+.alerta-exito .alert-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #b983ff;
+  text-align: center;
+}
+
+.alerta-exito .alert-message {
+  font-size: 15px;
+  color: #e3dcff;
+  margin-top: 5px;
+}
+
+.alerta-exito button {
+  color: #9b5de5 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
